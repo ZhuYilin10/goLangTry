@@ -12,6 +12,8 @@ func main() {
 	aaa()
 	bbb()
 	arrayList()
+	mapTest()
+	ifTry()
 }
 
 func aaa() {
@@ -61,4 +63,27 @@ func arrayList() {
 	//数组新增一个元素
 	array5 := append(array4, 3)
 	fmt.Println(array5)
+}
+
+//map 的使用
+func mapTest() {
+	//make用于内建类型（map、slice 和channel）的内存分配。new用于各种类型的内存分配。
+	numbers := make(map[string]int)
+	numbers["a"] = 1
+	numbers["b"] = 2
+
+	fmt.Println(numbers["a"])
+
+	//删除元素
+	delete(numbers, "a")
+
+	fmt.Println(numbers)
+}
+
+func ifTry() {
+	if x := (1 + 2); x == 10 {
+		fmt.Println("b")
+	} else if x == 3 {
+		fmt.Println("a")
+	}
 }
