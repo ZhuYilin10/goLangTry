@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //定义变量 声明常量 调用方法 数据类型
 
@@ -14,6 +16,8 @@ func main() {
 	arrayList()
 	mapTest()
 	ifTry()
+	forTest()
+	killTest()
 }
 
 func aaa() {
@@ -80,10 +84,37 @@ func mapTest() {
 	fmt.Println(numbers)
 }
 
+//if 语句中给变量赋值并判断
 func ifTry() {
 	if x := (1 + 2); x == 10 {
 		fmt.Println("b")
 	} else if x == 3 {
 		fmt.Println("a")
+	}
+}
+
+//for 循环
+func forTest() {
+	sum := 0
+	for index := 0; index < 10; index++ {
+		sum += index
+	}
+
+	fmt.Println(sum)
+}
+
+func forTest2() {
+	for index := 10; index > 0; index-- {
+		if index == 5 {
+			continue
+		}
+
+		fmt.Println(index)
+	}
+}
+
+func killTest() {
+	for true {
+		forTest2()
 	}
 }
